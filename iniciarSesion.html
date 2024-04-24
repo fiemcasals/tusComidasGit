@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iniciarSesion</title>
+    <!--lo vinculo con la hoja css-->
+    <link rel="stylesheet" href="./css/styles-registro.css">
+</head>
+
+<body> 
+
+    <header>
+        <div>
+            <h1>¡Bienvenido a iniciar sesion!</h1> <!-- Título llamativo e ilustrativo -->
+        </div>
+        <div>
+            <a class="a" href="registrarse.html">Registrarse</a>
+        </div>
+    </header>
+
+    <main>
+
+        <form action="index.html" method="post">
+            <div>
+                <input type="text" name="nombre" id="name" placeholder="Ingrese su nombre de usuario" required>
+            </div>
+           
+            <div>
+                <input type="password" name="passWord" id="passWord" placeholder="Ingrese su contrasenia" required>
+            </div>
+           
+            <div>
+                <input class="boton" type="submit" value="Iniciar Sesión">
+            </div>
+            
+        </form>
+
+        <div class="center">
+            <!-- Al hacer clic en este botón, se llamará a la función 'mostrarFormulario()' -->
+            <input class="boton" type="button" value="Recuperar contraseña" style="margin-top:50px" onclick="mostrarFormulario()">
+        </div>
+
+        <!-- Este es el formulario que se mostrará cuando se haga clic en el botón -->
+        <div id="formulario-recuperacion" class="center" style="display:none; margin-top:20px;">
+            <form>
+            <input type="email" id="email" name="email" placeholder="Ingrese correo electronico">
+            <input type="submit" value="Enviar">
+            </form>
+        </div>
+
+
+
+    </main>
+
+    <!-- Video de fondo-->
+    <video autoplay muted id="videoBG">
+        <source src="./assets/video/Video de Producto Gastronómico.mp4" type="video/mp4">
+        Tu navegador no admite la etiqueta de video.
+    </video> 
+
+    <script>
+        // Obtener el elemento de video de fondo
+        var video = document.getElementById("videoBG");
+        // Establecer la velocidad de reproducción del video (por ejemplo, 0.5 para reproducir a la mitad de la velocidad original)
+        video.playbackRate = 0.85;
+    </script>
+
+    <script>
+        function mostrarFormulario() {
+        // Esta función cambia el estilo del formulario de 'none' a 'block' para mostrarlo
+        document.getElementById('formulario-recuperacion').style.display = 'block';
+        }
+    </script>
+
+
+</body>
+
+</html>

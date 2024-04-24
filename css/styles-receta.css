@@ -1,0 +1,60 @@
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-image: url('../assets/img/spaghetti.jpeg'); /* Agrega tu imagen de fondo aquí */
+    background-size: cover; /* Ajusta la imagen para cubrir todo el espacio disponible */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center center; /* Centra la imagen en la página */
+}
+
+.receta {
+
+    width: 50%;
+    margin: auto;
+    margin-top:50px;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    background-color: #ffffff80; /* Agrega un color de fondo para la sección de la receta */
+}
+
+.receta h1, .receta h2 {
+    color: #5D4037;
+}
+
+h3{
+font-size: 25px;
+margin: auto;
+padding: 15px;
+
+}
+
+.receta img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul, ol {
+    margin-left: 20px;
+}
+
+.contenedor-video {
+    position: relative; /* Posicionamiento relativo para el contenedor */
+    width: 50vw; /* Ancho del video igual al 50% del ancho de la ventana */
+    height: 50vw; /* Altura del video igual al ancho para mantener la relación 1:1 */
+    max-height: 50vh; /* Máxima altura del video igual al 50% de la altura de la ventana */
+    margin: auto; /* Centrado horizontal */
+    top: 0; bottom: 0; left: 0; right: 0; /* Posicionamiento para centrado vertical */
+    display: flex; /* Uso de Flexbox para alineación */
+    justify-content: center; /* Centrado horizontal con Flexbox */
+    align-items: center; /* Centrado vertical con Flexbox */
+  }
+  
+  .video-tutorial {
+    width: 100%; /* Ancho del video al 100% del contenedor */
+    height: 100%; /* Altura del video al 100% del contenedor */
+    padding: 30px;
+
+  }
+  

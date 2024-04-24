@@ -1,0 +1,124 @@
+* {
+margin: 0; /*el margen entre elementos*/
+padding: 0;/*el espaciado entre el contenido y el borde de las etiquetas*/
+box-sizing: border-box; /*se respeta el tamanio uqe uno le pone a la caja*/
+font-family: 'Nunito', sans-serif; /*es el estilo de las letras, podria ser otro, hay q ver estilos*/
+text-decoration: none; /* Quita el subrayado de los enlaces */
+}
+
+
+
+/* Estilos para el formulario */
+form {
+    width: 100%; /* Ancho del formulario */
+    margin: 0 auto; /* Centrar el formulario en la página */
+    text-align: center; /* Centrar el texto dentro del formulario */
+}
+
+
+/* Estilos para los campos de entrada */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 80%; /* Ocupar todo el ancho disponible */
+    padding: 1vh; /* Espaciado interno */
+    box-sizing: border-box; /* Incluir el relleno y el borde en el ancho total */
+    color: #fff; /* Color del texto blanco */
+    background-color: #000; /* Fondo negro */
+    font-weight: 600; /* Grosor del texto aumentado */
+}
+
+/* Estilos para el texto del placeholder */
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="password"]::placeholder {
+    color: #f0f0f0; /* Color del placeholder (texto) */
+}
+/* Estilos para el formulario */
+form {
+    width: 100%; /* Ancho del formulario */
+    margin: 0 auto; /* Centrar el formulario en la página */
+    text-align: center; /* Centrar el texto dentro del formulario */
+}
+
+
+/* Estilos para los campos de entrada */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 80%; /* Ocupar todo el ancho disponible */
+    padding: 1vh; /* Espaciado interno */
+    box-sizing: border-box; /* Incluir el relleno y el borde en el ancho total */
+    color: #fff; /* Color del texto blanco */
+    background-color: #000; /* Fondo negro */
+    font-weight: 600; /* Grosor del texto aumentado */
+}
+
+/* Estilos para el texto del placeholder */
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="password"]::placeholder {
+    color: #f0f0f0; /* Color del placeholder (texto) */
+}
+
+h1 {
+    text-align: center; /* Centra el título horizontalmente */
+    color: #fff; /* Color del texto */
+    font-size: 36px; /* Tamaño de la fuente */
+    margin-top: 5vh; /* Espacio superior */
+    margin-bottom: 3vh; /* Espacio inferior */
+    background-color: rgba(0, 0, 0, 0); /* Fondo transparente con 50% de opacidad */
+    padding: 2vh; /* Añade espacio alrededor del título */
+}
+
+
+
+
+/* Estilo para el video de fondo */
+#videoBG {
+position: fixed;
+right: 0;
+bottom: 0;
+min-width: 100%;
+min-height: 100%;
+width: auto;
+height: auto;
+z-index: -1000;
+
+}
+
+/* Estilos para los elementos dentro del formulario */
+form div {
+    margin-bottom: 2vh; /* Espacio entre los elementos del formulario */
+    margin-top: 4vh;
+
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0); /* Fondo negro con 50% de opacidad */
+}
+
+.a{
+    color: white; /* Cambia el color del texto del enlace a blanco */
+    position: absolute; /* Establece la posición absoluta */
+    top: 0; /* Coloca el enlace en la parte superior */
+    right: 0; /* Coloca el enlace en el extremo derecho */
+    padding: 10px; /* Añade un poco de espacio alrededor del enlace */
+}
+
+
+.boton{
+    padding: 10px;
+    border: 3px solid white;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.center {
+    display: flex;
+    justify-content: center; /* Centrado horizontal */
+    align-items: center; /* Centrado vertical */
+    height: auto; /* Altura del contenedor (puede variar según tus necesidades) */
+}
+
+

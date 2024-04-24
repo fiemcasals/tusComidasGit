@@ -1,0 +1,265 @@
+* {
+    margin: 0; /*el margen entre elementos*/
+    padding: 0;/*el espaciado entre el contenido y el borde de las etiquetas*/
+    box-sizing: border-box; /*se respeta el tamanio que uno le pone a la caja*/
+    font-family: 'Nunito', sans-serif; /*es el estilo de las letras, podria ser otro, hay q ver estilos*/
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+}
+
+:root{ /*configura variables principales - hasta el momento tal vez la designacion del color no sea valida */
+    --main-color: white;
+    --secondary-color: black; /*#333*/
+    --third-color: red; /*#99000*/
+}
+
+
+#videoBG {
+position: fixed; /* Para que el video sea fijo en la ventana */
+top: 0;
+left: 0;
+min-width: 100%; /* Cubre todo el ancho del body */
+min-height: 100%; /* Cubre todo el alto del body */
+z-index: -1; /* Asegura que el video esté detrás de otros elementos */
+}
+
+
+h1{
+    font-size: 6rem; /*tamanio relativo de la fuente*/
+    font-weight: 700; /*hace referencia a que tiene que ser negrita*/
+    margin-bottom: 0; /*Elimina el margen predeterminado */
+    color:rgb(11, 50, 6);
+    align-items: center; /* Centra los elementos verticalmente dentro del contenedor */
+    text-align: center; /* Centra el texto horizontalmente */
+
+}
+
+h2{
+    font-size: 4rem; /*tamanio relativo de la fuente*/
+    font-weight: 700; /*hace referencia a que tiene que ser negrita*/
+    margin-bottom: 20px; /*distania relativa inferior con respecto a otra estructura*/
+    color:rgb(11, 50, 6);
+}
+
+@media screen and (height<=800px){
+    h1{
+        font-size: 2rem; /*tamanio relativo de la fuente*/
+    }
+
+    h2{
+        font-size: 1.5rem; /*tamanio relativo de la fuente*/
+
+    }
+}
+
+.container {
+    display: flex; /* Hace que los elementos hijos se coloquen en una fila */
+    justify-content: space-between; /* Distribuye uniformemente el espacio entre los elementos */
+    align-items: center; /* Centra los elementos verticalmente dentro del contenedor */
+    background-image: linear-gradient(to right top, #50775b, #5a8b69, #659f78, #6fb488, #79ca98, #7ad6a4, #7be1b1, #7bedbe, #73f1cb, #6bf4d8, #64f8e4, #5ffbf1);
+    color: var(--main-color); /*este color hace referencia a las letras, de todas formas hay q ver la especificidad*/
+    padding: 20px; /*entiendo que es el espacio de la caja con el resto de las otras cajas o elementos*/
+    height: auto; /*alto de la caja que contiene al titulo*/
+    margin: auto; /* Espacio entre los elementos de navegación */
+    text-align: center; /* Centra el texto horizontalmente */
+    flex-direction: row; /* Coloca los elementos en una fila */
+    overflow-y: hidden; /* Oculta el desplazamiento vertical */
+    flex-wrap: nowrap; /* Evita que los elementos se envuelvan */
+    overflow-x: auto; /* Permite el desplazamiento horizontal cuando los elementos no caben */
+}
+
+.containerPlatos {
+    display: flex; /* Hace que los elementos hijos se coloquen en una fila */
+    justify-content: flex-start; /* Comienza desde el extremo izquierdo */
+    align-items: center; /* Centra los elementos verticalmente dentro del contenedor */
+    padding: 20px; /*entiendo que es el espacio de la caja con el resto de las otras cajas o elementos*/
+    height: auto; /*alto de la caja que contiene al titulo*/
+    margin: auto; /* Espacio entre los elementos de navegación */
+    text-align: center; /* Centra el texto horizontalmente */
+    flex-direction: row; /* Coloca los elementos en una fila */
+    overflow-y: hidden; /* Oculta el desplazamiento vertical */
+    flex-wrap: nowrap; /* Evita que los elementos se envuelvan */
+    overflow-x: auto; /* Permite el desplazamiento horizontal cuando los elementos no caben */
+    
+}
+
+
+.caja{
+    
+    width: 25vh;
+    margin-right:3.5vh;
+    margin-left:3.5vh;
+    flex-direction: row; /* Coloca los elementos en una fila */
+    flex-wrap: nowrap; /* hace que los elementos se posiciones en una sola líneaz */
+    overflow-x: scroll; /* Permite el desplazamiento horizontal cuando el contenido excede el ancho del contenedor */
+    overflow-y: hidden; /* Oculta el desplazamiento vertical */
+    flex-shrink: 0; /* Evita que los elementos se contraigan */
+    
+}
+
+.cajaPlato{
+    background-color: blue;
+    width: 25vh;
+    margin-right:2.5vh;
+    margin-left:2.5vh;
+    flex-direction: row; /* Coloca los elementos en una fila */
+    flex-wrap: nowrap; /* hace que los elementos se posiciones en una sola líneaz */
+    overflow-x: scroll; /* Permite el desplazamiento horizontal cuando el contenido excede el ancho del contenedor */
+    overflow-y: hidden; /* Oculta el desplazamiento vertical */
+    flex-shrink: 0; /* Evita que los elementos se contraigan */
+    
+}
+
+.palabra {
+    transition: transform 0.5s ease; /* Duración y tipo de transición */
+    display: flex; /* Utiliza el modelo de caja flexible para alinear los elementos internos */
+    align-items: center; /* Alinea verticalmente los elementos internos en el centro */
+    display: flex; /* Hace que los elementos hijos se coloquen en una fila */
+    justify-content: center; /* Centra los elementos horizontalmente dentro del contenedor */
+    align-items: center; /* Centra los elementos verticalmente dentro del contenedor */
+    }
+    
+a{
+    display: flex;
+    flex-direction: row;
+}
+.image-description {
+    
+    margin-left: 10px; /* Margen a la izquierda del texto */
+    font-size: 1rem; /* Tamaño de fuente del texto */
+}
+
+.caja a img {
+    margin-right: 15px; /* Espacio entre el icono y el texto */
+    width: 100%;
+}
+
+.caja a span { /*span son las etiquetas de los iconos*/
+    font-size:3vh;
+    color: white;
+}
+
+
+@media screen and (height <=800){
+    .caja a img {
+        margin-right: 5px; /* Espacio entre el icono y el texto */
+        width: 1.5rem;
+    }
+
+    .caja a span {
+        font-size: 1rem;
+    }
+}
+
+
+.div img {
+    width: 100%; /* Ajusta la imagen para que ocupe todo el ancho del contenedor */
+    height: 100%; /* Mantiene la proporción de aspecto de la imagen */
+    object-fit: cover; /* Ajusta la imagen para que cubra completamente el contenedor manteniendo la proporción de aspecto */
+}
+
+
+/*estilos de header*/
+header{
+
+    position: sticky;
+    top: 0; /*que figure en la posicion 0, es decir, arriba de todo, pero ademas que se mueva cuando me desplace, manteniendo esa posicion todo el tiempo*/
+    z-index: 100; /* Puedes ajustar este valor según tus necesidades */
+}
+
+#terceros {
+     background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+}
+
+
+.palabra:hover {
+    transform: scale(1.5); /* El factor por el cual se agrandará el texto */
+}
+
+.mi-seccion {
+    background-color:blue;
+}
+
+
+.columna{
+    display: flex; /* Hace que los elementos hijos se coloquen en una fila */
+    flex-direction: column;
+}
+
+body {
+    display: flex; /* Habilita el uso de flexbox */
+    flex-direction: column; /* Coloca los elementos en una columna */
+}
+
+/* Cambia la dirección de las imágenes en las secciones de almuerzo, desayuno y cena */
+
+
+.sectionTitle{
+    align-items: center; /* Centra los elementos verticalmente dentro del contenedor */
+    text-align: center; /* Centra el texto horizontalmente */
+}
+
+
+.seccionComidas{
+    width: 100%;
+    margin:0 auto;
+    text-align: center;
+    h1{
+        margin-top:50px;
+        margin-bottom:20px;
+    }
+    .comidasImagenes{
+        display:flex;
+        justify-content: space-evenly;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+        flex-shrink: 0; /* Evita que los elementos se contraigan */
+        flex-direction: row; /* Coloca los elementos en una fila */
+        flex-wrap: nowrap; /* hace que los elementos se posiciones en una sola líneaz */
+        overflow-x: scroll; /* Permite el desplazamiento horizontal cuando el contenido excede el ancho del contenedor */
+        overflow-y: hidden; /* Oculta el desplazamiento vertical */
+        div{
+            width: 650px;
+            height: 620px;
+            border-radius: 5px;
+            
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 5px;
+            }
+        }
+    }
+    button{
+       margin-bottom:20px;
+    }
+}
+
+footer{
+    display: flex; /* Utiliza flexbox */
+    align-items: center; /* Centra los elementos verticalmente dentro del contenedor */
+    justify-content: center; /* Centra los elementos horizontalmente dentro del contenedor */
+}
+.cambiar-usuario-btn {
+    background-color: transparent;
+    border: 1px solid #000;
+    border-radius: 15px;
+    padding: 10px 20px;
+    margin: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.cambiar-usuario-btn:hover {
+    background-color: #11a011;
+    color: #fff;
+}
+
+@media screen and (max-width: 800px) {
+    .cambiar-usuario-btn {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registro</title>
+    <!--lo vinculo con la hoja css-->
+    <link rel="stylesheet" href="./css/styles-registro.css">
+</head>
+
+<body> 
+
+    <header>
+        <div>
+            <h1>¡Bienvenido al Registro!</h1> <!-- Título llamativo e ilustrativo -->
+        </div>
+        <div>
+            <a class="a" href="iniciarSesion.html">Iniciar Sesion</a>
+        </div>
+    </header>
+
+    <main>  
+
+        <form action="index.html" method="post">
+            <div>
+                <input type="text" name="nombre" id="name" placeholder="Ingrese su nombre de usuario" required>
+            </div>
+            <div>
+                <input type="email" name="correo" id="correo" placeholder="Ingrese su correo" required>
+            </div>
+            <div>
+                <input type="password" name="passWord" id="passWord" placeholder="Ingrese su contrasenia" required>
+            </div>
+            <div>
+                <input type="password" name="passWord" id="passWord" placeholder="Ingrese nuevamente su contrasenia" required>
+            </div>
+            
+            <button class="boton" type="submit">Registrarse</button>
+        </form>
+
+
+
+    </main>
+
+    <!-- Video de fondo-->
+    <video autoplay muted id="videoBG">
+        <source src="./assets/video/Video de Producto Gastronómico.mp4" type="video/mp4">
+        Tu navegador no admite la etiqueta de video.
+    </video> 
+
+    <script>
+        // Obtener el elemento de video de fondo
+        var video = document.getElementById("videoBG");
+        // Establecer la velocidad de reproducción del video (por ejemplo, 0.5 para reproducir a la mitad de la velocidad original)
+        video.playbackRate = 0.85;
+    </script>
+
+</body>
+
+</html>
