@@ -3,15 +3,11 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
-    background-image: url('../assets/img/spaghetti.jpeg'); /* Agrega tu imagen de fondo aquí */
-    background-size: cover; /* Ajusta la imagen para cubrir todo el espacio disponible */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    background-position: center center; /* Centra la imagen en la página */
 }
 
 .receta {
 
-    width: 50%;
+    width: 95%;
     margin: auto;
     margin-top:50px;
     padding: 30px;
@@ -41,8 +37,8 @@ ul, ol {
 
 .contenedor-video {
     position: relative; /* Posicionamiento relativo para el contenedor */
-    width: 50vw; /* Ancho del video igual al 50% del ancho de la ventana */
-    height: 50vw; /* Altura del video igual al ancho para mantener la relación 1:1 */
+    width: 70vw; /* Ancho del video igual al 50% del ancho de la ventana */
+    height: 70vw; /* Altura del video igual al ancho para mantener la relación 1:1 */
     max-height: 50vh; /* Máxima altura del video igual al 50% de la altura de la ventana */
     margin: auto; /* Centrado horizontal */
     top: 0; bottom: 0; left: 0; right: 0; /* Posicionamiento para centrado vertical */
