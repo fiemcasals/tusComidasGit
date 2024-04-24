@@ -99,7 +99,7 @@ body {
 /*achique el paddin en version celular*/
 @media screen and (heigth<=800px){
     .containerPlatos{
-        padding: 5px; /
+        padding: 15px; /
     }
 }
 
@@ -107,7 +107,7 @@ body {
     
     width: 40vh;
     height: 20vh;
-    margin: 2.5vh;
+    margin: 1vh;
     flex-direction: row; /* Coloca los elementos en una fila */
     flex-wrap: nowrap; /* hace que los elementos se posiciones en una sola líneaz */
     flex-shrink: 0; /* Evita que los elementos se contraigan */
