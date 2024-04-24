@@ -99,7 +99,7 @@ body {
 /*achique el paddin en version celular*/
 @media screen and (heigth<=800px){
     .containerPlatos{
-        padding: 15px; /
+        padding: 5px; /
     }
 }
 
