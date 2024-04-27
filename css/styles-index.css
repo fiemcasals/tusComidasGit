@@ -105,9 +105,11 @@ body {
 
 .cajaNav{
     
-    width: 40vh;
-    height: 20vh;
+    width: 30vw;
+    height: 10vw;
     margin: 1vh;
+    margin-right: 4vw;
+    margin-left: 4vw;
     flex-direction: row; /* Coloca los elementos en una fila */
     flex-wrap: nowrap; /* hace que los elementos se posiciones en una sola líneaz */
     flex-shrink: 0; /* Evita que los elementos se contraigan */
@@ -116,16 +118,16 @@ body {
 /*achico las cajas del navegador en version celular*/
 @media screen and (heigth<=800px){
     .cajaNav{
-        width: 40vw;
-        height: 20vw;
+        width: 50vw;
+        height: 25vw;
         margin: 6vw;
     }
 }
 
 .caja{
     fill-opacity: rgba(165, 42, 42, 0.418);
-    width: 25vh;
-    height: 25vh;
+    width: 10vh;
+    height: 10vh;
     margin-right:3.5vh;
     margin-left:3.5vh;
     flex-direction: row; /* Coloca los elementos en una fila */
@@ -135,8 +137,8 @@ body {
 }
 @media screen and (height <=800px){
     .caja{
-        width: 15vh;
-        height: 15vh;
+        width: 25vh;
+        height: 25vh;
         margin-right:2vh;
         margin-left:2vh;
     }
@@ -163,7 +165,7 @@ a{
 /*se setea para que la aclaracion, en el caso de que la tenga, este al lado del icono/foto en tamanio 1rem*/ /*+su media*/
 .image-description {
     margin-left: 10px; /* Margen a la izquierda del texto */
-    font-size: 2rem; /* Tamaño de fuente del texto */
+    font-size: 1rem; /* Tamaño de fuente del texto */
     color:black;
     font-weight: bold; /* Utiliza negrita */
 }
