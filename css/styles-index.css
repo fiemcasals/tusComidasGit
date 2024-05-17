@@ -69,17 +69,19 @@ body {
 
 /*seteo el contenedor general de las cajas en el navegador*/
 .container {
+
     display: flex; /* Hace que los elementos hijos se coloquen en una fila */
     justify-content: space-between; /* Distribuye uniformemente el espacio entre los elementos */
     align-items: center; /* Centra los elementos verticalmente dentro del contenedor */
     background-image: linear-gradient(to right top, #50775b, #5a8b69, #659f78, #6fb488, #79ca98, #7ad6a4, #7be1b1, #7bedbe, #73f1cb, #6bf4d8, #64f8e4, #5ffbf1);
-    padding: 20px; /*entiendo que es el espacio de la caja con el resto de las otras cajas o elementos*/
-    height: auto; /*alto del contenedor que contiene el navegador*/
+    
+    height: 120px; /*alto del contenedor que contiene el navegador*/
     text-align: center; /* Centra el texto horizontalmente */
     flex-direction: row; /* Coloca los elementos en una fila */
     overflow-y: hidden; /* Oculta el desplazamiento vertical */
     flex-wrap: nowrap; /* Evita que los elementos se solapen*/
     overflow-x: auto; /* Permite el desplazamiento horizontal cuando los elementos no caben */
+    
 }
 
 .containerPlatos {
@@ -87,10 +89,9 @@ body {
     display: flex; /* Hace que los elementos hijos se coloquen en una fila */
     justify-content: flex-start; /* Comienza desde el extremo izquierdo */
     align-items: center; /* Centra los elementos verticalmente dentro del contenedor */
-    padding: 30px; /*entiendo que es el espacio del contenedor con respecto a su contenido*/
-    height: auto; /*alto de la caja que contiene al titulo*/
-    margin: auto; /* Espacio entre los elementos de navegación */
-    text-align: center; /* Centra el texto horizontalmente */
+    height: auto; /*el alto lo define su contenido + margin*/
+    width: 100%;
+    margin-top: 50px; /* el espacio entre los elementos por fuera de la caja */
     flex-direction: row; /* Coloca los elementos en una fila */
     overflow-y: hidden; /* Oculta el desplazamiento vertical */
     flex-wrap: nowrap; /* Evita que los elementos se envuelvan */
@@ -101,13 +102,15 @@ body {
     .containerPlatos{
         padding: 15px; /
     }
+    .container{
+        height: 85px;
+    }
 }
 
 .cajaNav{
     
-    width: 30vw;
-    height: 10vw;
-    margin: 1vh;
+    width: 170px;
+    height: 85px;
     margin-right: 4vw;
     margin-left: 4vw;
     flex-direction: row; /* Coloca los elementos en una fila */
@@ -118,23 +121,24 @@ body {
 /*achico las cajas del navegador en version celular*/
 @media screen and (heigth<=800px){
     .cajaNav{
-        width: 50vw;
-        height: 25vw;
+        width: 150px;
+        height: 75px;
         margin: 6vw;
     }
 }
 
 .caja{
+
     fill-opacity: rgba(165, 42, 42, 0.418);
-    width: 10vh;
-    height: 10vh;
-    margin-right:3.5vh;
-    margin-left:3.5vh;
+    width: 500px;
+    height: 1000px;
+    margin:30px;
     flex-direction: row; /* Coloca los elementos en una fila */
     flex-wrap: nowrap; /* hace que los elementos se posiciones en una sola líneaz */
     flex-shrink: 0; /* Evita que los elementos se contraigan */
     overflow: hidden; /* Oculta cualquier parte de la imagen que se salga del contenedor */
 }
+
 @media screen and (height <=800px){
     .caja{
         width: 25vh;
@@ -146,12 +150,18 @@ body {
 
 /*etiqueta puesta a las aclaraciones de iconos para que se posiciones alineadas a la derecha de las mismas*/
 .palabra {
+    
     transition: transform 0.5s ease; /* Duración y tipo de transición */
     display: flex; /* Utiliza el modelo de caja flexible para alinear los elementos internos */
     align-items: center; /* Alinea verticalmente los elementos internos en el centro */
     justify-content: center; /* Centra los elementos horizontalmente dentro del contenedor */
     align-items: center; /* Centra los elementos verticalmente dentro del contenedor */
     }
+
+.titule{
+
+    margin-top:30px;
+}
     
 /*puede que este bien, porque hay que darle estilos dentro de la etiqueta 'a'*/
 a{
@@ -182,8 +192,9 @@ a{
 
 
 .imagenPlato {
-    width: 100%; /* Ajusta la imagen para que ocupe todo el ancho del contenedor */
-    object-fit: fill; /* Estira la imagen para cubrir completamente el contenedor, deformándola si es necesario */
+    width: 100%;
+    height: 100%;/* Ajusta la imagen para que ocupe todo el ancho del contenedor */
+    object-fit: cover; /* Estira la imagen para cubrir completamente el contenedor, deformándola si es necesario */
     object-position: center; /* Centra la imagen dentro del contenedor */
 }
 
