@@ -1,0 +1,101 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos del formulario */
+h1 {
+    text-align: center;
+    margin-top: 50px;
+    color: white;
+}
+
+form {
+    background-color: rgba(255, 255, 255, 0.144);
+    border-radius: 10px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+form h2 {
+    text-align: center;
+    margin-top: 10px;
+}
+
+form input[type="text"],
+form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    
+    padding: 5px;
+}
+
+form button[type="submit"],
+form button[type="button"] {
+    padding: 8px 20px;
+    margin: 10px;
+    background-color: #4CAF50; /* Color verde */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+
+form button[type="submit"]:hover,
+form button[type="button"]:hover {
+    background-color: #45a049; /* Color verde más oscuro al pasar el cursor */
+}
+
+/* Estilos de la lista de ingredientes */
+#ingredientes {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.ingrediente {
+    
+    display: flex;
+    align-items: center;
+    
+    
+}
+
+.ingrediente input[type="text"] { /*es el texto del nuevo ingrediente*/
+    flex: 6; /* El 60% del espacio */
+    box-sizing: border-box;
+    margin-right: 5px;
+    padding: 5px;
+    height: 45px; 
+}
+
+.ingrediente input[type="number"],
+.ingrediente input[type="text"][name="unidadDeMedida[]"] {
+    flex: 2; /* El 20% del espacio */
+    box-sizing: border-box;
+    margin-right: 5px;
+    padding: 5px;
+    height: 45px;
+}
+
+.ingrediente button[type="button"] {
+    width: 100px;
+    background-color: #4CAF50; /* Color verde */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 45px;
+    
+    
+}
+
+.ingrediente button[type="button"]:hover {
+    background-color: #45a049; /* Color verde más oscuro al pasar el cursor */
+}
+
+

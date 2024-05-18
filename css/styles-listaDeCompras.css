@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+#anotador {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #ffffff3b;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#producto {
+    width: 80%;
+    margin-right: 20px;
+}
+
+button {
+    margin-left: 20px;
+}
+
+#listaProductos {
+    margin-top: 10px;
+}
+
+.producto {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+
+.producto:last-child {
+    border-bottom: none;
+}
+
+.eliminar-producto-izquierda,
+.eliminar-producto-derecha {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.eliminar-producto-izquierda:hover,
+.eliminar-producto-derecha:hover {
+    opacity: 0.7;
+}
+
+.eliminar-producto-derecha {
+    background-color: #4CAF50;
+    margin-left: 5px;
+}

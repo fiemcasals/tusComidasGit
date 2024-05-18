@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tus comidas</title>
+    <link rel="shortcut icon" href="./assets/img/plato-cubierto.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/styles-index.css">
+    <link rel="stylesheet" href="./css/styles-Ingredientes.css">
+    
+</head>
+
+<!-- Video de fondo-->
+<video autoplay muted id="videoBG">
+    <source src="./assets/video/Video de Producto Gastronómico.mp4" type="video/mp4">
+    Tu navegador no admite la etiqueta de video.
+    </video>
+
+    <script>
+    /* Obtener el elemento de video de fondo*/
+    var video = document.getElementById("videoBG");
+    /* Establecer la velocidad de reproducción del video (por ejemplo, 0.5 para reproducir a la mitad de la velocidad original)*/
+    video.playbackRate = 0.85;
+    </script>
+
+<header>
+    <div class="container">
+            <div class="cajaNav palabra">
+                <a href="paginaPrincipal.html">
+                    <img class="imagenIcono" src="./assets/img/plato-cubierto.png" loading="lazy" alt="Menu principal">
+                    <span class="image-description">Menu principal</span>
+                </a>
+            </div>
+
+            <div class="cajaNav palabra">
+                <a href="indexTerceros.html">
+                    <img class="imagenIcono" src="./assets/img/comidas-terceros.png" loading="lazy" alt="Menues de terceros">
+                    <span class="image-description">Menues de terceros</span>
+                </a>
+            </div>
+
+            <div class="cajaNav palabra" >
+                <a href="agregarPlato.html">
+                    <img class="imagenIcono" src="./assets/img/Agregar-menu.png" loading="lazy" alt="Agregar plato">
+                    <span class="image-description">Agregar plato</span>
+                </a>
+            </div>
+
+            <div class="cajaNav palabra">
+                <a href="stock.html">
+                    <img class="imagenIcono" src="./assets/img/lista-compras.png" loading="lazy" alt="Agregar producto disponible">
+                    <span class="image-description">Agregar viveres</span>
+                </a>
+            </div>
+
+            <div class="cajaNav palabra">
+                <a href="listaDeCompras.html">
+                    <img class="imagenIcono" src="./assets/img/lista-compras.png" loading="lazy" alt="Agregar producto a comprar">
+                    <span class="image-description">Lista de compras</span>
+                </a>
+            </div>
+    </div>
+</header>
+
+<body>
+    
+    <h1>Ingrese los detalles de la receta</h1>
+    
+    <form id="recetaForm">
+        <h2>Titulo</h2>
+      <input type="text" id="titulo" name="titulo" placeholder="Ingrese el titulo de la receta">
+    
+      <h2>Receta</h2>
+      <textarea id="receta" name="receta" rows="6" placeholder="Ingrese su receta aqui"></textarea>
+    
+      <h2>Ingredientes:</h2>
+      <div id="ingredientes">
+        <div class="ingrediente">
+          <button type="button" onclick="eliminarIngrediente(this)">Eliminar</button>
+          <input type="text" name="ingrediente[]" placeholder="Ingrese un ingrediente">
+          <input type="number" name="cantidad[]" placeholder="Ingrese cantidad">
+          <input type="text" name="unidadDeMedida[]" placeholder="Ingrese unid de medida">
+          <button type="button" onclick="agregarIngrediente()">Agregar ingrediente</button>
+        </div>
+      </div>
+    
+      <button class="center" type="submit">Guardar receta</button>
+
+    </form>
+    
+    <script>
+      function agregarIngrediente() {
+        var nuevoIngrediente = document.createElement('div');
+        nuevoIngrediente.className = 'ingrediente';
+        nuevoIngrediente.innerHTML = `
+        <button type="button" onclick="eliminarIngrediente(this)">Eliminar</button>
+          <input type="text" name="ingrediente[]" placeholder="Ingrese un ingrediente">
+          <input type="number" name="cantidad[]" placeholder="Ingrese cantidad">
+          <input type="text" name="unidadDeMedida[]" placeholder="Ingrese unid de medida">
+          <button type="button" onclick="agregarIngrediente()">Agregar ingrediente</button>
+        `;
+        document.getElementById('ingredientes').appendChild(nuevoIngrediente);
+      }
+    
+      function eliminarIngrediente(elemento) {
+        elemento.parentNode.remove();
+      }
+    </script>
+
+
+
+</body>
+</html>

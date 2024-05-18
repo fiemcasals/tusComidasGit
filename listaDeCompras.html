@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tus comidas</title>
+    <link rel="shortcut icon" href="./assets/img/plato-cubierto.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/styles-index.css">
+    <link rel="stylesheet" href="./css/styles-listaDeCompras.css">
+</head>
+
+<body>
+
+    <!-- Video de fondo-->
+    <video autoplay muted id="videoBG">
+        <source src="./assets/video/Video de Producto Gastronómico.mp4" type="video/mp4">
+        Tu navegador no admite la etiqueta de video.
+        </video>
+    
+        <script>
+        /* Obtener el elemento de video de fondo*/
+        var video = document.getElementById("videoBG");
+        /* Establecer la velocidad de reproducción del video (por ejemplo, 0.5 para reproducir a la mitad de la velocidad original)*/
+        video.playbackRate = 0.85;
+        </script>
+
+<header>
+    <div class="container">
+            <div class="cajaNav palabra">
+                <a href="paginaPrincipal.html">
+                    <img class="imagenIcono" src="./assets/img/plato-cubierto.png" loading="lazy" alt="Menu principal">
+                    <span class="image-description">Menu principal</span>
+                </a>
+            </div>
+
+            <div class="cajaNav palabra">
+                <a href="indexTerceros.html">
+                    <img class="imagenIcono" src="./assets/img/comidas-terceros.png" loading="lazy" alt="Menues de terceros">
+                    <span class="image-description">Menues de terceros</span>
+                </a>
+            </div>
+
+            <div class="cajaNav palabra" >
+                <a href="agregarPlato.html">
+                    <img class="imagenIcono" src="./assets/img/Agregar-menu.png" loading="lazy" alt="Agregar plato">
+                    <span class="image-description">Agregar plato</span>
+                </a>
+            </div>
+
+            <div class="cajaNav palabra">
+                <a href="stock.html">
+                    <img class="imagenIcono" src="./assets/img/lista-compras.png" loading="lazy" alt="Agregar producto disponible">
+                    <span class="image-description">Agregar viveres</span>
+                </a>
+            </div>
+
+            <div class="cajaNav palabra">
+                <a href="listaDeCompras.html">
+                    <img class="imagenIcono" src="./assets/img/lista-compras.png" loading="lazy" alt="Agregar producto a comprar">
+                    <span class="image-description">Lista de compras</span>
+                </a>
+            </div>
+    </div>
+</header>
+    <div id="anotador">
+        <h2>Anotador de Productos</h2>
+        <input type="text" id="producto" placeholder="Ingrese un producto">
+        <button onclick="agregarProducto()">Agregar Producto</button>
+        <div id="listaProductos"></div>
+    </div>
+
+    <script>
+        function agregarProducto() {
+            var productoInput = document.getElementById('producto');
+            var producto = productoInput.value.trim();
+            if (producto !== '') {
+                var listaProductos = document.getElementById('listaProductos');
+                var nuevoProducto = document.createElement('div');
+                nuevoProducto.className = 'producto';
+                nuevoProducto.textContent = producto;
+
+                var eliminarProductoIzquierdaBtn = document.createElement('button');
+                eliminarProductoIzquierdaBtn.className = 'eliminar-producto-izquierda';
+                eliminarProductoIzquierdaBtn.textContent = 'Eliminar producto';
+                eliminarProductoIzquierdaBtn.onclick = function() {
+                    var productoPadre = this.parentNode;
+                    productoPadre.style.transition = '0.5s';
+                    productoPadre.style.transform = 'translateX(-150%)'; // Desplazar el producto hacia la izquierda
+                    setTimeout(function() {
+                        productoPadre.remove(); // Eliminar el producto después del desplazamiento
+                    }, 500);
+                };
+
+                var eliminarProductoDerechaBtn = document.createElement('button');
+                eliminarProductoDerechaBtn.className = 'eliminar-producto-derecha';
+                eliminarProductoDerechaBtn.textContent = 'Cargar producto a Stock';
+                eliminarProductoDerechaBtn.onclick = function() {
+                    var productoPadre = this.parentNode;
+                    productoPadre.style.transition = '0.5s';
+                    productoPadre.style.transform = 'translateX(150%)'; // Desplazar el producto hacia la derecha
+                    setTimeout(function() {
+                        productoPadre.remove(); // Eliminar el producto después del desplazamiento
+                    }, 500);
+                };
+
+                nuevoProducto.appendChild(eliminarProductoIzquierdaBtn);
+                nuevoProducto.appendChild(eliminarProductoDerechaBtn);
+                listaProductos.appendChild(nuevoProducto);
+                productoInput.value = ''; // Limpiar el input después de agregar el producto
+                productoInput.focus(); // Colocar el cursor nuevamente en el cuadro de entrada de texto
+            }
+        }
+
+        document.getElementById('producto').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                agregarProducto();
+            }
+        });
+    </script>
+</body>
+</html>
