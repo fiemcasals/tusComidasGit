@@ -20,14 +20,6 @@ form {
     padding: 20px;
 }
 
-@media screen and (heigth<=800px){
-    form{
-        width:90%;
-        padding:10px;
-        border-radius:5px;
-    }
-}
-
 form h2 {
     text-align: center;
     margin-top: 10px;
@@ -49,7 +41,6 @@ form button[type="button"] {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    
 }
 
 form button[type="submit"]:hover,
@@ -61,21 +52,26 @@ form button[type="button"]:hover {
 #ingredientes {
     display: flex;
     flex-direction: column;
-    
 }
 
 .ingrediente {
-    
     display: flex;
     align-items: center;
 }
 
-@media screen and (heigth<=800px){
-    .ingrediente{
+@media screen and (max-height: 800px) {
+    .ingrediente {
         flex-direction: column;
     }
-}
 
+    .ingrediente input[type="text"],
+    .ingrediente input[type="number"],
+    .ingrediente input[type="text"][name="unidadDeMedida[]"] {
+        width: 100%; /* Establecer el ancho al 100% */
+        margin-right: 0; /* Eliminar el margen derecho */
+        margin-bottom: 5px; /* Añadir margen inferior para separación */
+    }
+}
 
 .ingrediente input[type="text"] { /*es el texto del nuevo ingrediente*/
     flex: 6; /* El 60% del espacio */
@@ -102,12 +98,8 @@ form button[type="button"]:hover {
     border-radius: 5px;
     cursor: pointer;
     height: 45px;
-    
-    
 }
 
 .ingrediente button[type="button"]:hover {
     background-color: #45a049; /* Color verde más oscuro al pasar el cursor */
 }
-
-

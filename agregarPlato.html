@@ -75,17 +75,23 @@
       <textarea id="receta" name="receta" rows="6" placeholder="Ingrese su receta aqui"></textarea>
     
       <h2>Ingredientes:</h2>
+      
+      <button type="button" onclick="agregarIngrediente()">Agregar ingrediente</button>
+      <button class="center" type="submit">Guardar receta</button>
       <div id="ingredientes">
+        
         <div class="ingrediente">
-          <button type="button" onclick="eliminarIngrediente(this)">Eliminar</button>
+          
           <input type="text" name="ingrediente[]" placeholder="Ingrese un ingrediente">
           <input type="number" name="cantidad[]" placeholder="Ingrese cantidad">
           <input type="text" name="unidadDeMedida[]" placeholder="Ingrese unid de medida">
-          <button type="button" onclick="agregarIngrediente()">Agregar ingrediente</button>
+          <button type="button" onclick="eliminarIngrediente(this)">Eliminar</button>
+          
         </div>
+          
       </div>
     
-      <button class="center" type="submit">Guardar receta</button>
+      
 
     </form>
     
@@ -94,13 +100,15 @@
         var nuevoIngrediente = document.createElement('div');
         nuevoIngrediente.className = 'ingrediente';
         nuevoIngrediente.innerHTML = `
-        <button type="button" onclick="eliminarIngrediente(this)">Eliminar</button>
+        
           <input type="text" name="ingrediente[]" placeholder="Ingrese un ingrediente">
           <input type="number" name="cantidad[]" placeholder="Ingrese cantidad">
           <input type="text" name="unidadDeMedida[]" placeholder="Ingrese unid de medida">
-          <button type="button" onclick="agregarIngrediente()">Agregar ingrediente</button>
+          <button type="button" onclick="eliminarIngrediente(this)">Eliminar</button>
         `;
-        document.getElementById('ingredientes').appendChild(nuevoIngrediente);
+       
+        document.getElementById('ingredientes').insertBefore(nuevoIngrediente, document.getElementById('ingredientes').firstChild);
+
       }
     
       function eliminarIngrediente(elemento) {
