@@ -74,13 +74,18 @@ body {
     justify-content: space-between; /* Distribuye uniformemente el espacio entre los elementos */
     align-items: center; /* Centra los elementos verticalmente dentro del contenedor */
     background-image: linear-gradient(to right top, #50775b, #5a8b69, #659f78, #6fb488, #79ca98, #7ad6a4, #7be1b1, #7bedbe, #73f1cb, #6bf4d8, #64f8e4, #5ffbf1);
-    
     height: 120px; /*alto del contenedor que contiene el navegador*/
     text-align: center; /* Centra el texto horizontalmente */
     flex-direction: row; /* Coloca los elementos en una fila */
     overflow-y: hidden; /* Oculta el desplazamiento vertical */
     flex-wrap: nowrap; /* Evita que los elementos se solapen*/
     overflow-x: auto; /* Permite el desplazamiento horizontal cuando los elementos no caben */
+    
+}
+
+.containerTer{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,63,1) 29%, rgba(0,212,255,1) 100%);
     
 }
 

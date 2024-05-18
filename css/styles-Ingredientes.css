@@ -20,6 +20,14 @@ form {
     padding: 20px;
 }
 
+@media screen and (heigth<=800px){
+    form{
+        width:90%;
+        padding:10px;
+        border-radius:5px;
+    }
+}
+
 form h2 {
     text-align: center;
     margin-top: 10px;
@@ -29,7 +37,6 @@ form input[type="text"],
 form textarea {
     width: 100%;
     box-sizing: border-box;
-    
     padding: 5px;
 }
 
@@ -61,9 +68,14 @@ form button[type="button"]:hover {
     
     display: flex;
     align-items: center;
-    
-    
 }
+
+@media screen and (heigth<=800px){
+    .ingrediente{
+        flex-direction: column;
+    }
+}
+
 
 .ingrediente input[type="text"] { /*es el texto del nuevo ingrediente*/
     flex: 6; /* El 60% del espacio */
