@@ -241,3 +241,21 @@ footer{
         padding: 5px 10px;
     }
 }
+
+.navegacion {
+    background-color: rgba(0, 128, 0, 0.993);
+    margin: 40px;
+    padding: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 10px;
+}
+
+.next {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+

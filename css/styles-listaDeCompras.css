@@ -3,29 +3,64 @@ body {
     background-color: #f2f2f2;
 }
 
+h2 {
+    text-align: center;
+}
+
+
 #anotador {
     width: 80%;
     margin: 20px auto;
     background-color: #ffffff3b;
     border: 1px solid #ccc;
     border-radius: 5px;
-    padding: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
-#producto {
-    width: 80%;
-    margin-right: 20px;
+
+
+#anotador input {
+    margin: 5px 10px; /* Margen horizontal para separación */
 }
+
+#anotador button {
+    margin: 5px 10px; /* Margen horizontal para separación */
+}
+
 
 button {
     margin-left: 20px;
 }
 
 #listaProductos {
-    margin-top: 10px;
+    
+    
+    display: flex; /* Mantener display: flex; para que los elementos internos se alineen en fila por defecto */
+    align-items: center; /* Centrar verticalmente los elementos */
 }
 
+#listaProductos span,
+#listaProductos button {
+    margin:10px; 
+    align-items: center;
+}
+
+@media screen and (max-height: 800px) {
+    #listaProductos {
+        flex-direction: column; /* Cambiar a columna cuando la altura es menor que 800px */
+        width: 90%;
+        margin: 10px auto;
+    }
+}
+
+.listaProductos{
+    margin:10px;
+    padding: 10px;
+    background-color: rgba(0, 238, 255, 0.116);
+}
 .producto {
+    
     padding: 10px;
     border-bottom: 1px solid #ccc;
     cursor: pointer;
@@ -35,11 +70,12 @@ button {
 
 .producto:last-child {
     border-bottom: none;
+    
 }
 
 .eliminar-producto-izquierda,
 .eliminar-producto-derecha {
-    background-color: #f44336;
+    background-color: #091246;
     color: white;
     border: none;
     border-radius: 5px;
@@ -55,5 +91,5 @@ button {
 
 .eliminar-producto-derecha {
     background-color: #4CAF50;
-    margin-left: 5px;
+    
 }

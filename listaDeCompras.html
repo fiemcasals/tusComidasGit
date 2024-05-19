@@ -63,60 +63,72 @@
             </div>
     </div>
 </header>
-    <div id="anotador">
-        <h2>Anotador de Productos</h2>
-        <input type="text" id="producto" placeholder="Ingrese un producto">
-        <button onclick="agregarProducto()">Agregar Producto</button>
-        <div id="listaProductos"></div>
-    </div>
+    
+<div id="anotador">
+    <h2>Anotador de Productos</h2>
+    <input type="text" id="producto" placeholder="Ingrese un producto">
+    <input type="number" id="cantidad" placeholder="Cantidad">
+    <input type="text" id="unidadMedida" placeholder="Unidad de Medida">
+    <button onclick="agregarProducto()">Agregar Producto</button>
+    <div id="listaProductos"></div>
+</div>
 
-    <script>
-        function agregarProducto() {
-            var productoInput = document.getElementById('producto');
-            var producto = productoInput.value.trim();
-            if (producto !== '') {
-                var listaProductos = document.getElementById('listaProductos');
-                var nuevoProducto = document.createElement('div');
-                nuevoProducto.className = 'producto';
-                nuevoProducto.textContent = producto;
+<script>
+    function agregarProducto() {
+        var productoInput = document.getElementById('producto');
+        var cantidadInput = document.getElementById('cantidad');
+        var unidadMedidaInput = document.getElementById('unidadMedida');
+        var producto = productoInput.value.trim();
+        var cantidad = cantidadInput.value.trim();
+        var unidadMedida = unidadMedidaInput.value.trim();
+        if (producto !== '') {
+            var listaProductos = document.getElementById('listaProductos');
+            var nuevoProducto = document.createElement('div');
+            nuevoProducto.className = 'listaProductos';
+            nuevoProducto.innerHTML = `<span>${producto} - ${cantidad} ${unidadMedida}</span>`;
 
-                var eliminarProductoIzquierdaBtn = document.createElement('button');
-                eliminarProductoIzquierdaBtn.className = 'eliminar-producto-izquierda';
-                eliminarProductoIzquierdaBtn.textContent = 'Eliminar producto';
-                eliminarProductoIzquierdaBtn.onclick = function() {
-                    var productoPadre = this.parentNode;
-                    productoPadre.style.transition = '0.5s';
-                    productoPadre.style.transform = 'translateX(-150%)'; // Desplazar el producto hacia la izquierda
-                    setTimeout(function() {
-                        productoPadre.remove(); // Eliminar el producto después del desplazamiento
-                    }, 500);
-                };
+            
+            var eliminarProductoIzquierdaBtn = document.createElement('button');
+            eliminarProductoIzquierdaBtn.className = 'eliminar-producto-izquierda';
+            eliminarProductoIzquierdaBtn.textContent = 'Eliminar producto';
+            eliminarProductoIzquierdaBtn.onclick = function() {
+                var productoPadre = this.parentNode;
+                productoPadre.style.transition = '0.5s';
+                productoPadre.style.transform = 'translateX(-150%)'; // Desplazar el producto hacia la izquierda
+                setTimeout(function() {
+                    productoPadre.remove(); // Eliminar el producto después del desplazamiento
+                }, 500);
+            };
 
-                var eliminarProductoDerechaBtn = document.createElement('button');
-                eliminarProductoDerechaBtn.className = 'eliminar-producto-derecha';
-                eliminarProductoDerechaBtn.textContent = 'Cargar producto a Stock';
-                eliminarProductoDerechaBtn.onclick = function() {
-                    var productoPadre = this.parentNode;
-                    productoPadre.style.transition = '0.5s';
-                    productoPadre.style.transform = 'translateX(150%)'; // Desplazar el producto hacia la derecha
-                    setTimeout(function() {
-                        productoPadre.remove(); // Eliminar el producto después del desplazamiento
-                    }, 500);
-                };
+            var eliminarProductoDerechaBtn = document.createElement('button');
+            eliminarProductoDerechaBtn.className = 'eliminar-producto-derecha';
+            eliminarProductoDerechaBtn.textContent = 'Cargar producto a Stock';
+            eliminarProductoDerechaBtn.onclick = function() {
+                var productoPadre = this.parentNode;
+                productoPadre.style.transition = '0.5s';
+                productoPadre.style.transform = 'translateX(150%)'; // Desplazar el producto hacia la derecha
+                setTimeout(function() {
+                    productoPadre.remove(); // Eliminar el producto después del desplazamiento
+                }, 500);
+            };
 
-                nuevoProducto.appendChild(eliminarProductoIzquierdaBtn);
-                nuevoProducto.appendChild(eliminarProductoDerechaBtn);
-                listaProductos.appendChild(nuevoProducto);
-                productoInput.value = ''; // Limpiar el input después de agregar el producto
-                productoInput.focus(); // Colocar el cursor nuevamente en el cuadro de entrada de texto
-            }
+            nuevoProducto.appendChild(eliminarProductoIzquierdaBtn);
+            nuevoProducto.appendChild(eliminarProductoDerechaBtn);
+            listaProductos.appendChild(nuevoProducto);
+            productoInput.value = ''; // Limpiar el input después de agregar el producto
+            cantidadInput.value = ''; // Limpiar el input de cantidad después de agregar el producto
+            unidadMedidaInput.value = ''; // Limpiar el input de unidad de medida después de agregar el producto
+            productoInput.focus(); // Colocar el cursor nuevamente en el cuadro de entrada de texto
         }
+    }
 
-        document.getElementById('producto').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                agregarProducto();
-            }
-        });
-    </script>
+    document.getElementById('producto').addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            agregarProducto();
+        }
+    });
+</script>
+
+
 </body>
 </html>
