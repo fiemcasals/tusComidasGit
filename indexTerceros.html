@@ -7,6 +7,7 @@
     <title>Tus comidas</title>
     <link rel="shortcut icon" href="./assets/img/plato-cubierto.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/styles-index.css">
+
 </head>
 
 <body>
@@ -24,47 +25,47 @@
         video.playbackRate = 0.85;
         </script>
 
-<header>
-    <div class="container containerTer">
-            <div class="cajaNav palabra">
-                <a href="paginaPrincipal.html">
-                    <img class="imagenIcono" src="./assets/img/plato-cubierto.png" loading="lazy" alt="Menu principal">
-                    <span class="image-description">Menu principal</span>
-                </a>
-            </div>
+    <header>
+        <div class="container containerTer">
+                <div class="cajaNav palabra">
+                    <a href="paginaPrincipal.html">
+                        <img class="imagenIcono" src="./assets/img/plato-cubierto.png" loading="lazy" alt="Menu principal">
+                        <span class="image-description">Menu principal</span>
+                    </a>
+                </div>
 
-            <div class="cajaNav palabra">
-                <a href="indexTerceros.html">
-                    <img class="imagenIcono" src="./assets/img/comidas-terceros.png" loading="lazy" alt="Menues de terceros">
-                    <span class="image-description">Menues de terceros</span>
-                </a>
-            </div>
+                <div class="cajaNav palabra">
+                    <a href="indexTerceros.html">
+                        <img class="imagenIcono" src="./assets/img/comidas-terceros.png" loading="lazy" alt="Menues de terceros">
+                        <span class="image-description">Menues de terceros</span>
+                    </a>
+                </div>
 
-            <div class="cajaNav palabra" >
-                <a href="agregarPlato.html">
-                    <img class="imagenIcono" src="./assets/img/Agregar-menu.png" loading="lazy" alt="Agregar plato">
-                    <span class="image-description">Agregar plato</span>
-                </a>
-            </div>
+                <div class="cajaNav palabra" >
+                    <a href="agregarPlato.html">
+                        <img class="imagenIcono" src="./assets/img/Agregar-menu.png" loading="lazy" alt="Agregar plato">
+                        <span class="image-description">Agregar plato</span>
+                    </a>
+                </div>
 
-            <div class="cajaNav palabra">
-                <a href="stock.html">
-                    <img class="imagenIcono" src="./assets/img/lista-compras.png" loading="lazy" alt="Agregar producto disponible">
-                    <span class="image-description">Agregar viveres</span>
-                </a>
-            </div>
+                <div class="cajaNav palabra">
+                    <a href="stock.html">
+                        <img class="imagenIcono" src="./assets/img/lista-compras.png" loading="lazy" alt="Agregar producto disponible">
+                        <span class="image-description">Agregar viveres</span>
+                    </a>
+                </div>
 
-            <div class="cajaNav palabra">
-                <a href="listaDeCompras.html">
-                    <img class="imagenIcono" src="./assets/img/lista-compras.png" loading="lazy" alt="Agregar producto a comprar">
-                    <span class="image-description">Lista de compras</span>
-                </a>
-            </div>
-    </div>
-</header>
+                <div class="cajaNav palabra">
+                    <a href="listaDeCompras.html">
+                        <img class="imagenIcono" src="./assets/img/lista-compras.png" loading="lazy" alt="Agregar producto a comprar">
+                        <span class="image-description">Lista de compras</span>
+                    </a>
+                </div>
+        </div>
+    </header>
     <section>
         <h1 class="palabra titule">Desayuno</h1>
-            <div class="containerPlatos">
+            <div class="containerPlatos" id="desayuno">
                 
                 <div class="caja palabra">
                     <a href="detalle.html">
@@ -136,13 +137,18 @@
                         <img class="imagenPlato" src="./assets/img/pizza.jpg" loading="lazy" alt="Menu principal">
                     </a>
                 </div>
-
+              
+                <div class="navegacion">
+                    <button class="next" onclick="cargarMasImagenes('desayuno')">Siguiente</button>
+                </div>
+                
+                
             </div>
     </section>
 
     <section>
-        <h1 class="palabra titule">Almuerzo</h1>
-        <div class="containerPlatos">
+        <h1 class="palabra titule" >Almuerzo</h1>
+        <div class="containerPlatos" id="almuerzo">
             <div class="caja palabra">
                 <a href="detalle.html">
                     <img class="imagenPlato" src="./assets/img/ensalada.jpg" loading="lazy" alt="Menu principal">
@@ -213,12 +219,17 @@
                     <img class="imagenPlato" src="./assets/img/pizza.jpg" loading="lazy" alt="Menu principal">
                 </a>
             </div>
+
+            <div class="navegacion">
+                <button class="next" onclick="cargarMasImagenes('almuerzo')">Siguiente</button>
+            </div>
+
         </div>
     </section>
 
     <section>
-        <h1 class="palabra titule">Cena</h1>
-        <div class="containerPlatos">
+        <h1 class="palabra titule" >Cena</h1>
+        <div class="containerPlatos" id="cena">
             <div class="caja palabra">
                 <a href="detalle.html">
                     <img class="imagenPlato" src="./assets/img/ensalada.jpg" loading="lazy" alt="Menu principal">
@@ -289,9 +300,32 @@
                     <img class="imagenPlato" src="./assets/img/pizza.jpg" loading="lazy" alt="Menu principal">
                 </a>
             </div>
+
+            <div class="navegacion">
+                <button class="next" onclick="cargarMasImagenes('cena')">Siguiente</button>
+            </div>
+
         </div>
     </section>
     
+    <script>
+        function cargarMasImagenes(id) {
+            // Obtener el contenedor de imágenes
+            var contenedor = document.getElementById(id);
+    
+            // Crear nuevas imágenes y agregarlas al contenedor
+            for (var i = 0; i < 4; i++) { // Por ejemplo, agregar 4 imágenes adicionales
+                var nuevaImagen = document.createElement('div');
+                nuevaImagen.className = 'caja palabra';
+                nuevaImagen.innerHTML = `
+                    <a href="detalle.html">
+                        <img class="imagenPlato" src="./assets/img/pizza.jpg" loading="lazy" alt="Menu principal">
+                    </a>
+                `;
+                contenedor.insertBefore(nuevaImagen, contenedor.lastElementChild);
+            }
+        }
+    </script>
     
     <footer>
            
