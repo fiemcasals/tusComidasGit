@@ -34,6 +34,7 @@ header{
 
 /*seteo los h1 y h2 en general y al final redimensiono para menos de 800px*/
 h1{
+    
     font-size: 6rem; /*tamanio relativo de la fuente*/
     font-weight: 700; /*hace referencia a que tiene que ser negrita*/
     margin-bottom: 0; /*Elimina el margen predeterminado */
@@ -44,6 +45,7 @@ h1{
 }
 
 h2{
+    
     font-size: 4rem; /*tamanio relativo de la fuente*/
     font-weight: 700; /*hace referencia a que tiene que ser negrita*/
     margin-bottom: 20px; /*distania relativa inferior con respecto a otra estructura*/
@@ -56,8 +58,7 @@ h2{
     }
 
     h2{
-        font-size: 1.5rem; /*tamanio relativo de la fuente*/
-
+        font-size: 1rem; /*tamanio relativo de la fuente*/
     }
 }
 
@@ -163,10 +164,14 @@ body {
     align-items: center; /* Centra los elementos verticalmente dentro del contenedor */
     }
 
-.titule{
-
-    margin-top:30px;
+.titule{ 
+    margin:1vw 3vw 1vw 3vw;
+    padding: 1vw 2vw 1vw 2vw;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.5); /* Color blanco con 50% de opacidad */
 }
+
+
     
 /*puede que este bien, porque hay que darle estilos dentro de la etiqueta 'a'*/
 a{
@@ -220,7 +225,8 @@ footer{
     justify-content: center; /* Centra los elementos horizontalmente dentro del contenedor */
 }
 .cambiar-usuario-btn {
-    background-color: transparent;
+    
+    background-color: rgba(255, 255, 255, 0.5); /* Color blanco con 50% de opacidad */
     border: 1px solid #000;
     border-radius: 15px;
     padding: 10px 20px;
