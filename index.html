@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./css/styles-registro.css">
 </head>
 
-<body> 
+<body>
 
     <header>
         <div>
@@ -20,41 +20,39 @@
         </div>
     </header>
 
-    <main>  
+    <main>
 
-        <form action="pagina_principal.html" method="get">
+        <form id="registroForm" action="pagina_principal.html" method="get">
+
             <div>
-                <input type="text" name="nombre" id="name" placeholder="Ingrese su nombre de usuario" required>
+                <input type="text" name="nombre" id="username" placeholder="Ingrese su nombre de usuario">
+                <div id="usernameError" class="error-message"></div>
             </div>
             <div>
-                <input type="email" name="correo" id="correo" placeholder="Ingrese su correo" required>
+                <input type="email" name="correo" id="email" placeholder="Ingrese su correo">
+                <div id="emailError" class="error-message"></div>
             </div>
             <div>
-                <input type="password" name="passWord" id="passWord" placeholder="Ingrese su contrasenia" required>
+                <input type="password" name="passWord" id="password" placeholder="Ingrese su contrasenia" >
+                <div id="passwordError" class="error-message"></div>
             </div>
             <div>
-                <input type="password" name="passWord" id="passWord" placeholder="Ingrese nuevamente su contrasenia" required>
+                <input type="password" name="confirmPassWord" id="confirmPassword" placeholder="Ingrese nuevamente su contrasenia" >
             </div>
-            
+
             <button class="boton" type="submit">Registrarse</button>
+
         </form>
-
-
-
     </main>
 
     <!-- Video de fondo-->
     <video autoplay muted id="videoBG">
         <source src="./assets/video/video_de_producto_gastronómico.mp4" type="video/mp4">
         Tu navegador no admite la etiqueta de video.
-    </video> 
+    </video>
 
-    <script>
-        // Obtener el elemento de video de fondo
-        var video = document.getElementById("videoBG");
-        // Establecer la velocidad de reproducción del video (por ejemplo, 0.5 para reproducir a la mitad de la velocidad original)
-        video.playbackRate = 0.85;
-    </script>
+    <script src="./js/video_fondo.js"></script>
+    <script src="./js/validacion.js"></script>
 
 </body>
 
