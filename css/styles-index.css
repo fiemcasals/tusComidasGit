@@ -162,13 +162,15 @@ body {
     align-items: center; /* Alinea verticalmente los elementos internos en el centro */
     justify-content: center; /* Centra los elementos horizontalmente dentro del contenedor */
     align-items: center; /* Centra los elementos verticalmente dentro del contenedor */
-    }
+    overflow: hidden;
+}
 
 .titule{ 
     margin:1vw 3vw 1vw 3vw;
     padding: 1vw 2vw 1vw 2vw;
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.5); /* Color blanco con 50% de opacidad */
+    overflow: hidden;
 }
 
 
